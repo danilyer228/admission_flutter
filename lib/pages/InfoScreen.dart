@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:ffi';
 import 'package:vetmanager_admission_creator/Model/Rest/PhoneNumber.dart';
+import 'package:vetmanager_admission_creator/VmBottomAppBar.dart';
 import 'package:vetmanager_admission_creator/VmRequest.dart';
 
 import '../Model/Rest/Client.dart';
@@ -29,6 +30,7 @@ class _InfoScreenState extends State<InfoScreen> {
     phoneNumber = settings.arguments as PhoneNumber;
     clientResponse = getClientData(phoneNumber.asString());
     return Scaffold(
+        bottomNavigationBar: VmBottomAppBar().render(context),
         appBar: AppBar(
             centerTitle: true,
             title: FutureBuilder<ClientResponse>(

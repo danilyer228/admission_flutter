@@ -1,3 +1,0 @@
--keep class androidx.core.app.CoreComponentFactory { <init>(); }
--keep class com.danilyer.vetmanager_admission_creator.MainActivity { <init>(); }
--keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(); }

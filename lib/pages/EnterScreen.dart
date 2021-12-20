@@ -112,6 +112,7 @@ class _EnterScreenState extends State<EnterScreen> {
     try {
       ReferrerDetails? referrerDetails = await AndroidPlayInstallReferrer.installReferrer;
       referrerToken = referrerDetails!.installReferrer.toString();
+      print("AAAAA " + referrerToken);
       getCreds(referrerToken).then((value) async {
         Creds creds = Creds.fromJson(json.decode(value));
         Credentials credentials = Credentials(1, creds.data.url, creds.data.apiToken);
